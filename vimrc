@@ -23,7 +23,7 @@ let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 
 let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
-let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name	
+let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 
 let g:DevIconsEnableFoldersOpenClose = 1
 
@@ -44,10 +44,10 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
-set smartindent 
+set smartindent
 
 set number
-set relativenumber 
+set relativenumber
 set incsearch
 
 set autoread
@@ -64,7 +64,7 @@ let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
 let NERDTreeShowBookmarks=1
-let NERDTreeShowHidden=1  
+let NERDTreeShowHidden=1
 let mapleader = " "
 set path+=/home/talha/**100
 set suffixesadd+=.js
@@ -105,8 +105,8 @@ let g:airline_powerline_fonts = 1
 "let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:ale_set_quickfix = 1
-let g:ale_open_list = 1  
-let g:ale_keep_list_window_open = 0 
+let g:ale_open_list = 1
+let g:ale_keep_list_window_open = 0
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -149,4 +149,3 @@ set encoding=UTF-8
 
 set mouse=
 set ttymouse=
-
