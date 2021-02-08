@@ -49,6 +49,9 @@ set smartindent
 set number
 set relativenumber
 set incsearch
+set backspace=indent,eol,start
+set nobackup
+set noswapfile
 
 set autoread
 
@@ -79,17 +82,19 @@ nnoremap <leader>s :w<CR>
 nnoremap <leader>e :e<CR>
 inoremap jj <Esc>
 nnoremap <leader>v <c-w>v
+nnoremap <leader>x <c-w>x
+nnoremap <leader>w <c-w>w
 inoremap <tab><tab> <c-x><c-o>
 nnoremap hh  <c-w>h
 nnoremap ll  <c-w>l
 nnoremap <leader>j <c-d>
 nnoremap <leader>k <c-u>
-nnoremap <leader>r <c-o>
+nnoremap <leader>r <c-^>
 
 nnoremap <leader>a :source % <CR>
 
 nnoremap <leader>t :ter <CR>
-nnoremap n :NERDTreeToggle <CR>
+nnoremap <leader>n :NERDTreeToggle <CR>
 nnoremap <leader>q :q!<CR>
 
 noremap <Up> <Nop>
@@ -97,12 +102,21 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+
+"new ones
+
+nnoremap <leader>h H
+nnoremap <leader>l L
+nnoremap <leader>m M
+nnoremap <leader>,  <c-w><
+nnoremap <leader>.  <c-w>>
+
 let g:vim_jsx_pretty_enable_jsx_highlight=1
 let  g:airline_section_b=  '%{strftime("%c")}'
 let  g:airline_section_y=  'BN: %{bufnr("%")}'
 let g:airline_powerline_fonts = 1
 
-"let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:ale_set_quickfix = 1
 let g:ale_open_list = 1
@@ -118,7 +132,7 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 
-let g:ale_list_window_size = 5
+let g:ale_list_window_size = 3
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers=['eslint']
@@ -129,7 +143,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 " You can disable this option too
 " if you don't want linters to run on opening a file
-let g:ale_lint_on_enter = 0
+"let g:ale_lint_on_enter = 0
 
 " when running at every change you may want to disable quickfix
 let g:prettier#quickfix_enabled = 0
@@ -143,8 +157,8 @@ autocmd BufWritePre,TextChanged,InsertLeave *.js,*.json,*.css,*.scss,*.less,*.gr
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-"set background=dark
-colorscheme palenight
+set background=dark
+colorscheme gruvbox
 set encoding=UTF-8
 
 set mouse=
